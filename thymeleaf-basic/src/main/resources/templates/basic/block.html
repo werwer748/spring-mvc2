@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2> block 태그는 타임리프에서 제공하는 태그 </h2>
+<span>React에서도 빈 태그로라도 싸줘야 하는 것처럼?</span>
+<th:block th:each="user : ${users}">
+    <div>
+        사용자 이름1 <span th:text="${user.username}"></span>
+        사용자 나이1 <span th:text="${user.age}"></span>
+    </div>
+    <div>
+        요약 <span th:text="${user.username} + ' / ' + ${user.age}"></span>
+    </div>
+</th:block>
+</body>
+</html>
